@@ -25,12 +25,11 @@ def single_solutions(request, pk):
         user = authenticate(request, username=username, password=password)
         login(request, user)
         if next == "":
-            return HttpResponseRedirect('home')
+            return redirect('home')
         else:
-            return HttpResponseRedirect(next)
+            return redirect(next)
 
-    context = {'id':pk}
-    return render(request, 'base/single-solution.html', context)
+    return render(request, 'base/single-solution.html')
 
 def features(request):
     context = {}
