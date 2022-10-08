@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Homepage</h1>
+Login page {% url 'login' %}
+
+<a href="{% url 'login' %}">Log In</a>
+
+
+Registration Page {% url 'register' %}
+
+{% endblock content %}
